@@ -9,3 +9,7 @@ This tool is based on code igniter, simply make sure, that all requirements are 
 # About
 
 With this webtool you can display and manage files and mandates in a decentralised way. Everyone can contribute entrys, a clever permission system prevents abuse.
+
+# ToDo 
+
+Add a database dump or a migration service to setup the database
