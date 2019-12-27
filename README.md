@@ -8,6 +8,8 @@ This tool is based on code igniter, simply make sure, that all requirements are 
 
 You can login with the credentials 'admin' and 'password'. Make sure to change the password!
 
+Delete the DATABASE_DUMP folder afterwards!
+
 # About
 
 With this webtool you can display and manage files and mandates in a decentralised way. Everyone can contribute entrys, a clever permission system prevents abuse.
