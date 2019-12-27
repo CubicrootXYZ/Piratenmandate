@@ -10,6 +10,8 @@ You can login with the credentials 'admin' and 'password'. Make sure to change t
 
 Delete the DATABASE_DUMP folder afterwards!
 
+I am using a MySQL database, therefore you need to change the group by mode: `SET GLOBAL sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));`
+
 # About
 
 With this webtool you can display and manage files and mandates in a decentralised way. Everyone can contribute entrys, a clever permission system prevents abuse.
