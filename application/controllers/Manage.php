@@ -63,8 +63,9 @@ class Manage extends Auth_Controller
             $this->form_validation->set_rules('mandate_end', 'Mandatsende', 'required');
             $this->form_validation->set_rules('status', 'Status', 'in_list[0,1,2,3]');
             $this->form_validation->set_rules('institution', 'Institution', 'required');
+            $this->form_validation->set_rules('election_result', 'Wahlergebnis', 'greater_than_equal_to[0]');
 
-            $val = $this->manage_mandatenew->validateForm($this->input->post('state_name'), $this->input->post('postal_code'), $this->input->post('status'));
+            $val = $this->manage_mandatenew->validateForm($this->input->post('state_name'), $this->input->post('postal_code'), $this->input->post('status'), $this->input->post('mandate_start'), $this->input->post('mandate_end'));
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 $data['errors'] = $val['errors'];

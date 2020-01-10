@@ -52,7 +52,7 @@ class Manage_mandateedit extends CI_Model {
                 $ret['state_id'] = $res[0]['id'];
             } else {
                 $ret['validation'] = false;
-                $ret['errors'] .= 'Bundesland nicht gültig. ';
+                $ret['errors'] .= '<p>Bundesland wird benötigt oder ist nicht gültig. </p>';
             }
             //validate city
             $this->db->select('*');
@@ -65,16 +65,16 @@ class Manage_mandateedit extends CI_Model {
                 $ret['city_id'] = $res[0]['id'];
             } else {
                 $ret['validation'] = false;
-                $ret['errors'] .= 'PLZ nicht gültig. ';
+                $ret['errors'] .= '<p>PLZ wird benötigt oder ist nicht gültig. </p>';
             }
             //validate status
             if($this->ion_auth->in_group(['acknowledged_user']) && !(in_array($status, ['0', '1']))) {
                 $ret['validation'] = false;
-                $ret['errors'] .= 'Nicht berechtigt diesen Status zu setzen. ';
+                $ret['errors'] .= '<p>Nicht berechtigt diesen Status zu setzen. </p>';
             }
             if($this->ion_auth->in_group(['member']) && !(in_array($status, ['0']))) {
                 $ret['validation'] = false;
-                $ret['errors'] .= 'Nicht berechtigt diesen Status zu setzen. ';
+                $ret['errors'] .= '<p>Nicht berechtigt diesen Status zu setzen. </p>';
             }   
                       
 

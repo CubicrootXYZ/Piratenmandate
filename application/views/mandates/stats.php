@@ -4,7 +4,7 @@
 
         <div class="card card-single ">
             <div class="card-header orange-header">
-            Anzahl Mandatsträger nach Ebene
+            Anzahl Mandate nach Ebene
             </div>
         </div>
 
@@ -119,7 +119,7 @@
 
         <div class="card card-single ">
             <div class="card-header orange-header">
-            Anzahl Mandatsträger nach Kategorien
+            Anzahl Mandate nach Kategorien
             </div>
         </div>
 

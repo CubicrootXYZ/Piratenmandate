@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h2 class="text-centered padded">Mandatsträger</h2>
+    <h2 class="text-centered padded">Mandat</h2>
 
     <div class="row single">
         <!-- Basic Card Example -->

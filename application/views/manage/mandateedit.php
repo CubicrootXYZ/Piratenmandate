@@ -1,7 +1,7 @@
 
 
 <div class="container-fluid">
-    <h2 class="text-centered padded">Mandatsträger bearbeiten</h2>
+    <h2 class="text-centered padded">Mandat bearbeiten</h2>
 <div class="card">
   <div class="card-body">
 

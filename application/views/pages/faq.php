@@ -30,7 +30,7 @@
                 Wie kann ich meine Einträge entfernen?
             </div>
             <div class="card-body">
-                In der Mandatsträgerliste und im Archiv gibt es in der Suche die Option "Nur eigene Einträge", hiermit kannst du alle deine Einträge ansehen und löschen oder bearbeiten. Weitere Möglichkeiten findest du in deinem Nutzerprofil.
+                In der Mandatsliste und im Archiv gibt es in der Suche die Option "Nur eigene Einträge", hiermit kannst du alle deine Einträge ansehen und löschen oder bearbeiten. Weitere Möglichkeiten findest du in deinem Nutzerprofil.
             </div>
 
         </div>

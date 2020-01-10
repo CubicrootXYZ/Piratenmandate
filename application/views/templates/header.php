@@ -76,19 +76,19 @@
          <hr class="sidebar-divider">
          <!-- Heading -->
          <div class="sidebar-heading">
-            Mandatsträger verwalten
+            Mandate verwalten
          </div>
          <li class="nav-item">
             <a class="nav-link" href="/manage/mandate_new">
             <i class="fas fa-fw fa-user-plus"></i>
-            <span>Neuer Mandatsträger</span></a>
+            <span>Neues Mandat</span></a>
          </li>
          <?php endif;?>
          <?php if ($this->ion_auth->in_group(['admin', 'superuser', 'acknowledged_user'])):?>
          <li class="nav-item">
             <a class="nav-link" href="/manage/mandate_acklist">
             <i class="fas fa-fw fa-check"></i>
-            <span>Mandatsträger freischalten</span></a>
+            <span>Mandate freischalten</span></a>
          </li>
          <?php endif;?>
          <?php if ($this->ion_auth->in_group(['admin', 'superuser', 'acknowledged_user', 'members'])):?>
@@ -114,7 +114,7 @@
          <li class="nav-item">
             <a class="nav-link" href="/manage/mandate_list">
             <i class="fas fa-fw fa-list"></i>
-            <span>Mandatsträger bearbeiten</span></a>
+            <span>Mandate bearbeiten</span></a>
          </li>
          <li class="nav-item">
             <a class="nav-link" href="/managearchive/list">

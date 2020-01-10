@@ -8,7 +8,7 @@ class Manage_mandatenew extends CI_Model {
             $this->load->library('form_validation');
         }
 
-        public function validateForm($state, $postal_code, $status) {
+        public function validateForm($state, $postal_code, $status, $begin, $end) {
             $ret = [];
             $ret['validation'] = true;
             $ret['errors'] = '';
@@ -19,11 +19,17 @@ class Manage_mandatenew extends CI_Model {
             $query = $this->db->get();
             $res =  $query->result_array();
 
+            //validate begin/end time
+            if ($begin > $end) {
+                $ret['validation'] = false;
+                $ret['errors'] .= '<p>Mandat endet bevor es angefangen hat. </p>';
+            }
+
             if (isset($res[0]['id'])) {
                 $ret['state_id'] = $res[0]['id'];
             } else {
                 $ret['validation'] = false;
-                $ret['errors'] .= 'Bundesland nicht gültig. ';
+                $ret['errors'] .= '<p>Bundesland wird benötigt oder nicht gültig. </p>';
             }
             //validate city
             $this->db->select('*');
@@ -36,16 +42,16 @@ class Manage_mandatenew extends CI_Model {
                 $ret['city_id'] = $res[0]['id'];
             } else {
                 $ret['validation'] = false;
-                $ret['errors'] .= 'PLZ nicht gültig. ';
+                $ret['errors'] .= '<p>PLZ wird benötigt oder nicht gültig. </p>';
             }
             //validate status
             if($this->ion_auth->in_group(['acknowledged_user']) && !(in_array($status, ['0', '1']))) {
                 $ret['validation'] = false;
-                $ret['errors'] .= 'Nicht berechtigt diesen Status zu setzen. ';
+                $ret['errors'] .= '<p>Nicht berechtigt diesen Status zu setzen. </p>';
             }
             if($this->ion_auth->in_group(['member']) && !(in_array($status, ['0']))) {
                 $ret['validation'] = false;
-                $ret['errors'] .= 'Nicht berechtigt diesen Status zu setzen. ';
+                $ret['errors'] .= '<p>Nicht berechtigt diesen Status zu setzen. </p>';
             }   
                       
 

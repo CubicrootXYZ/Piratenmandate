@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h2 class="text-centered padded">Neuen Mandatsträger anlegen</h2>
+    <h2 class="text-centered padded">Neues Mandat anlegen.</h2>
 <div class="card">
   <div class="card-body upl">
     <?php echo validation_errors(); ?>
@@ -15,7 +15,6 @@
 
     <label for="title">Wahlergebnis <br><small>Wahlergebnis in Prozent</small></label><br>
     <input type="number" step="0.1" name="election_result" value="<?php echo set_value('election_result'); ?>" /><br />
-
     <label for="title">Bundesland* <br><small>Bundesland in dem das Mandat ausgeübt wird</small></label><br>
     <select name="state_name">
       <option value="<?php echo set_value('state_name'); ?>"><?php echo set_value('state_name'); ?></option>

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <h2 class="text-centered padded">Mandatsträger bearbeiten</h2>
+  <h2 class="text-centered padded">Mandate bearbeiten</h2>
 <div class="row single">
 <div class="card search">
   <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
