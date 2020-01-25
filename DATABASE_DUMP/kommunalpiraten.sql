@@ -8540,7 +8540,7 @@ CREATE TABLE `login_attempts` (
 
 CREATE TABLE `users` (
   `id` int(11) UNSIGNED NOT NULL,
-  `ip_address` varchar(45) NOT NULL,
+  `ip_address` varchar(45),
   `username` varchar(100) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(254) NOT NULL,
