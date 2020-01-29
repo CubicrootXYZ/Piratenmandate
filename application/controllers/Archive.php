@@ -25,7 +25,7 @@ class Archive extends CI_Controller {
                 $this->load->model('archive_list');
                 $data['data'] = $this->archive_list->getDossier($id);
 
-                if (isset($data['data']['title']) {
+                if (isset($data['data']['title'])) {
                         $data['title'] = $data['data']['title'];
                 } else {
                         $data['title'] = 'Dossier';
